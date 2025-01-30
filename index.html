@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadan Portfolio</title>
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src = "pics/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Sadan  </span>from India. <br/>I welcome opportunities <br/>to expand my skills set. </h1>
+                
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class = "container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pics/sadan.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="skill"> My name is <b>Sadan Kumar,</b> i am a <span style="color: red;">Full Stack Developer</span>
+                    <br/>Currently working as Senior Member Technical Staff in <span style="color: red;">Oracle Health India Pvt. Ltd.</span><br/>
+                    
+                    <span style="color: red;">14+ years</span> of experience in conducting analysis, design, coding and deployment.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills  </p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience  </p>
+                        <p class="tab-links" onclick="opentab('education')">Education  </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span>Backend Development</span><br/>Java, Springboot, Hibernate, Python, Microservices, Rest services, Kafka<br></li>
+                            <li> <span>Web Development UI/UX </span><br/>Html, Javascript CSS, React<br></li>
+                            <li> <span>Cloud</span><br/>AWS, Oracle Cloud (OCI)</li>
+                            <li> <span>Databases</span><br/>Oracle DB, MySQL, SQL Server, Essbase (Multidimensional database), 
+                                MangoDB, RedisDB<br></li>
+                            <li> <span>Soft Skill</span><br/>Excellent communication and interpersonal skills. Takes ownership, facilitate teamwork and lead activities.<br></li>
+                            </li><br/>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> <span>14+ years of experience </span><br/>Experience in architecting, designing scalable API/services, reviewing code, refactoring legacy code, handling complexity and developing appropriate software.<br></li>
+                            <li> <span>2009 - 2019 </span><br/>Tech Lead, Honeywell Technology Solution. (9+ year), Oct 2009 – Feb 2019.<br></li>
+                            <li> <span>2019 - 2021 </span><br/>Principal Member Technical Staff, Oracle India Pvt. Ltd., March 2019 – Dec 2021<br></li>
+                            <li> <span>2022 - Current </span><br/>Senior Member Technical Staff, Oracle Health India Pvt. Ltd (Cerner Healthcare)<br></li>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li> <span>Education</span><br/>Master’s in Computer Application (MCA) from Vellore Institute of Technology, VIT University with 8.69 CGPA.<br></li>
+                            <li> BCA (Bachelor of Computer Application) with 65%.<br></li>
+                           
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------- Contact -------------------->
+    <div id="contact">
+        <div class="container">
+            <div class = "row">
+                <div class="contact-left">
+                    <h1 class="sub-title"> Contact Me</h1>
+                    <p> <i class="fa fa-paper-plane" ></i>&nbsp;&nbsp;&nbsp;sadan.2507@gmail.com</p>
+                    <p><i class="fa fa-mobile" ></i>&nbsp;&nbsp;&nbsp;+91 7259569241</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa fa-facebook" ></i></a> &nbsp;&nbsp;&nbsp;
+                        <a href="https://www.linkedin.com/in/sadan-kumar-1b0a6980/"><i class="fa fa-linkedin" ></i></a>
+                    </div>
+                    <a href="" class="btn btn2"> Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type = "text" name="Name" placeholder="Your Name" requierd>
+                        <input type = "email" name="email" placeholder="Your Email" requierd>
+                        <textarea name="Message" rows="6" placeholder="Your Email" required></textarea>
+                        <button class="btn2" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
